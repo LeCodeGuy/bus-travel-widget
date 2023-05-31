@@ -21,14 +21,14 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color:#EF476F ;
+  background-color: #ef476f;
 }
 
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
-  color: #26547C;
+  font-family: "Lato", Helvetica, sans-serif;
+  color: #26547c;
   line-height: 1.5;
 }
 
@@ -104,7 +104,7 @@ p {
   margin-right: auto;
 }
 
-.row {
+/* .row {
   position: relative;
   width: 100%;
 }
@@ -113,9 +113,9 @@ p {
   float: left;
   margin: 0.5rem 2%;
   min-height: 0.125rem;
-}
+} */
 
-.col-1,
+/* .col-1,
 .col-2,
 .col-3,
 .col-4,
@@ -182,28 +182,41 @@ p {
 	content: "";
 	display: table;
 	clear: both;
+} */
+.sectionHead {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
 }
+.headingImg {
+    float:left;
 
+}
+.heading {
+    float:right;
+}
 .hidden-sm {
   display: none;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
+@media only screen and (min-width: 33.75em) {
+  /* 540px */
   .container {
     width: 80%;
   }
-  .form{
-    display:flex;
+  .form {
+    display: flex;
     flex-wrap: wrap;
-    margin:0% 10%;
+    margin: 0% 10%;
   }
-  .col-12{
+  /* .col-12{
     padding:0 10% !important;
-  }
+  } */
 }
 
-@media only screen and (min-width: 45em) {  /* 720px */
-  .col-1 {
+@media only screen and (min-width: 45em) {
+  /* 720px */
+  /* .col-1 {
     width: 4.33%;
   }
 
@@ -253,10 +266,11 @@ p {
 
   .hidden-sm {
     display: block;
-  }
+  } */
 }
 
-@media only screen and (min-width: 60em) { /* 960px */
+@media only screen and (min-width: 60em) {
+  /* 960px */
   .container {
     width: 75%;
     max-width: 90rem;
@@ -264,26 +278,26 @@ p {
 }
 
 /* ==== MY STYLING ==== */
-.form{
-  background-color: #06D6A0;
+.form {
+  background-color: #06d6a0;
   max-width: 780px;
   min-width: 300px;
   margin: 0 auto;
   border-radius: 15px;
   position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+  top: 45%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
-.content{
+/* .content{
   margin: 0 auto;
   padding: 0% 5%;
 }
 .errMessage {
   display: flex;
   flex-wrap: wrap;
-}
+}*/
 .btn{
   background-color: #FFD166;
   border: 0px solid #FFD166;

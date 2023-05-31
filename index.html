@@ -5,84 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="./css/bus-travel-widget.css"> -->
+    <link rel="stylesheet" href="./css/bus-travel-widget.css">
 </head>
 <body>
     <div class="container">
         <div class="form">
-            <div class="row">
-                <div class="col-1"><img class="headingImg"src="./img/bus.png" alt="" width="45"></div>
-                <div class="col-11"><h1 class="heading">Bus Travel Widget</h1></div>
+            <div class="sectionHead">
+                <img class="headingImg"src="./img/bus.png" alt="" width="50" height="50">
+                <h1 class="heading">Bus Travel Widget</h1>
             </div>
-            <div class="row">
-                <div class="col-2">
-                    <h3>Points:</h3>
-                </div>
-                <div class="col-10">
-                    <input type="text" name="points" id="txtPoints" value="">
-                </div>
-                <div class="col-2">
-                    <h3>Start location:</h3>
-                </div>
-                <div class="col-10">
-                    <select name="destinations" id="ddDestination">
-                        <option value="Khayelitsha">Khayelitsha</option>
-                        <option value="Dunoon">Dunoon</option>
-                        <option value="Mitchells Plain">Mitchells Plain</option>
-                    </select>
-                </div>
+            <div class="section">
+                <div>Points:</div>
+                <input type="text" name="points" id="txtPoints" value="">
+                <div>Start location:</div>
+                <select name="destinations" id="ddDestination">
+                    <option value="Khayelitsha">Khayelitsha</option>
+                    <option value="Dunoon">Dunoon</option>
+                    <option value="Mitchells Plain">Mitchells Plain</option>
+                </select>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <img src="./img/departure.png" alt="" width="45">
-                    <h2>Travel Times:</h2>
-                    <div>
-                        <input type="radio" name="travelTime" id="peak" value="Peak">
-                        <label for="peak">Peak</label>
-                        <input type="radio" name="travelTime" id="offPeak" Value="Off Peak">
-                        <label for="offPeak">Off Peak</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="returnTrip" id="returnTrip">
-                        <label for="returnTrip">Return Trip</label>
-                        <button class="btnCalculate">Calculate</button>
-                    </div>
+            <div class="section">
+                <img src="./img/departure.png" alt="" width="50" height="50">
+                <div>Travel Times:</div>
+                <div>
+                    <input type="radio" name="travelTime" id="peak" value="Peak">
+                    <label for="peak">Peak</label>
+                    <input type="radio" name="travelTime" id="offPeak" Value="Off Peak">
+                    <label for="offPeak">Off Peak</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="returnTrip" id="returnTrip">
+                    <label for="returnTrip">Return Trip</label>
+                    <button class="btnCalculate btn">Calculate</button>
                 </div>
             </div>
-            <div class="row">
-                <img src="./img/math.png" alt="" width="45">
-                <h1>Calculations</h1>
-                <div class="col-2">
-                    <h3>Number of single trips:</h3>
-                </div>
-                <div class="col-10">
-                    <input type="text" name="tripNumberSingle" id="tripNumberSingle" value=0>
-                </div>
-                <div class="col-2">
-                    <h3>Price per trip (single):</h3>
-                </div>
-                <div class="col-10">
-                    <input type="text" name="tripCostSingle" id="tripCostSingle" value=0>
-                </div>
-                <div class="col-2">
-                    <h3>Number of return trips:</h3>
-                </div>
-                <div class="col-10">
-                    <input type="text" name="tripNumberReturn" id="tripNumberReturn" value=0>
-                </div>
-                <div class="col-2">
-                    <h3>Price per trip (return):</h3>
-                </div>
-                <div class="col-10">
-                    <input type="text" name="tripCostReturn" id="tripCostReturn" value=0>
-                </div>
+            <div class="sectionHead">
+                <img src="./img/math.png" alt="" width="50" height="50">
+                <h2>Calculations</h2>
+            </div>
+            <div class="section">
+                <div>Number of single trips:</div>
+                <input type="text" name="tripNumberSingle" id="tripNumberSingle" value=0>
+                <div>Price per trip (single):</div>
+                <input type="text" name="tripCostSingle" id="tripCostSingle" value=0>
+                <div>Number of return trips:</div>
+                <input type="text" name="tripNumberReturn" id="tripNumberReturn" value=0>
+                <div>Price per trip (return):</div>
+                <input type="text" name="tripCostReturn" id="tripCostReturn" value=0>
             </div>
                 
-            
-        </div>
-
-        <div class="row">
-            <div class="col-12">
+            <div class="section">   
                 <h4>Icons used</h4>
                 <ul>
                     <li>
@@ -96,7 +68,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>        
     </div>
 
     <script src="./js/bus-travel-widget.js"></script>
