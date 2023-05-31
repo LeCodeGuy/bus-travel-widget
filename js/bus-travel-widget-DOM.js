@@ -30,27 +30,22 @@ function btnCalculate_onClick() {
     var travelTime = "";
 
     // resets the values
-    singleTripNumberElem.value = 0;
-    singleTripCostElem.value = 0;
-    returnTripNumberElem.value = 0;
-    returnTripCostElem.value = 0;
+    singleTripNumberElem.value = travel.resetValues();
+    singleTripCostElem.value = travel.resetValues();
+    returnTripNumberElem.value = travel.resetValues();
+    returnTripCostElem.value = travel.resetValues();
+    
+    // determine whether the traveller is travelling during peak or off-peak times
+    travelTime = travel.getTravelTime(travelTimeElem);
 
-    // Loop through the radio buttons
-    for (var i = 0; i < travelTimeElem.length; i++) {
-        if (travelTimeElem[i].checked) {
-            // Get the value of the selected radio button
-            travelTime = travelTimeElem[i].value;
-           
-            break; // Exit the loop once the selected radio button is found
-        }
-    }
     //check whether the traveller opted for a return trip
     if(returnTripElem.checked ===  true && Number(pointsAvailable) > 0) {        
-
+        // set the return trip values
         returnTripNumberElem.value = (Number(pointsAvailable)/Number(travel.tripCost(destination,travelTime)*2)).toFixed(2);//++;//;pointsAvailable//;
         returnTripCostElem.value = (Number(travel.tripCost(destination,travelTime)*2)).toFixed(2); 
     }
     else if(returnTripElem.checked ===  false && Number(pointsAvailable) > 0){
+        // set the single trip values
         singleTripNumberElem.value =(Number(pointsAvailable)/Number(travel.tripCost(destination,travelTime))).toFixed(2);// parseInt(returnTripNumberElem.value) + 1;
         singleTripCostElem.value = (Number(travel.tripCost(destination,travelTime))).toFixed(2);
     }

@@ -1,9 +1,8 @@
 function travelApp() {
     // Variables to be used in Factory Function
     var cost = 0;
-    function calculate(destination,travelTime) {
-
-    }
+    var departureTime = ""
+    
     function tripCost(destination,travelTime){
         switch(destination){
             case "Khayelitsha":
@@ -13,10 +12,6 @@ function travelApp() {
                 else{
                     cost = 40;
                 }
-    
-                // if(returnTrip === true){
-                //     cost = Number(cost) * 2;
-                // }
     
                 
                 break;
@@ -39,38 +34,25 @@ function travelApp() {
         }
         return cost;
     }
-    function travelTime(optionSelected) {
-        //if
+    function getTravelTime(travelTimeElem){
+        for (var i = 0; i < travelTimeElem.length; i++) {
+            if (travelTimeElem[i].checked) {
+                // Get the value of the selected radio button
+                departureTime = travelTimeElem[i].value;
+               
+                break; // Exit the loop once the selected radio button is found
+            }
+        }
+        return departureTime;
     }
-
-    function tripType() {
-        
+    function resetValues(){
+        return 0;
     }
-
-    function singleTrips() {
-
-    }
-
-    function singleTripPrice() {
-
-    }
-
-    function returnTrips() {
-
-    }
-
-    function returnTripPrice() {
-
-    }
+    
 
     return {
-        calculate,
         tripCost,
-        travelTime,
-        tripType,
-        singleTrips,
-        singleTripPrice,
-        returnTrips,
-        returnTripPrice
+        resetValues,
+        getTravelTime
     }
 }

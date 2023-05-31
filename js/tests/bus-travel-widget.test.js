@@ -4,68 +4,23 @@
 */
 describe("The bus travel app", function () {
 
-    it("should allow a user to enter an amount of points", function () {
+    it("should reset values for the counters", function () {
 
-        const travelApp = travelApp();
+        const travel = travelApp();
 
-        assert.equal(0, travelApp.functionName());
+        assert.equal(0, travel.resetValues());
     })
 
-    it("should allow a user select a start location", function () {
+    it("should calculate the trip cost based on destination an whether it is peak or off peak", function () {
 
-        const travelApp = travelApp();
+        const travel = travelApp();
 
-        assert.equal(0, travelApp.functionName());
+        assert.equal(50, travel.tripCost("Khayelitsha","Peak"));
+        assert.equal(40, travel.tripCost("Khayelitsha","Off Peak"));
+        assert.equal(31.25, travel.tripCost("Dunoon","Peak"));
+        assert.equal(25, travel.tripCost("Dunoon","Off Peak"));
+        assert.equal(37.5, travel.tripCost("Mitchells Plain","Peak"));
+        assert.equal(30, travel.tripCost("Mitchells Plain","Off Peak"));
     })
 
-    it("should allow a user to select peak or off-peak times", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-    it("should allow a user to select a return trip", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-    it("should calculate the number of single trips", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-    it("should calculate the price per single trip", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-    it("should calculate the number of return trips", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-
-    it("should calculate the price per return trip", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-    })
-
-    it("should calculate the price per trip based on travel time (peak or off-peak)", function () {
-
-        const travelApp = travelApp();
-
-        assert.equal(0, travelApp.functionName());
-
-    })
 })
