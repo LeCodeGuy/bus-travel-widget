@@ -15,9 +15,9 @@ btnCalculateElem.addEventListener("click",btnCalculate_onClick);
 // Check if values are available in localStorage
 
 // Instantiate the factory function
-const travelApp = travelApp();
+const travel = travelApp();
 
 // DOM events
 function btnCalculate_onClick() {
-
+    console.log("Hello World!");
 }
