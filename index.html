@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/bus-travel-widget.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <div class="row">
+                <div class="col-1"><img class="headingImg"src="./img/bus.png" alt="" width="45"></div>
+                <div class="col-11"><h1 class="heading">Bus Travel Widget</h1></div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h3>Points:</h3>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="points" id="txtPoints">
+                </div>
+                <div class="col-2">
+                    <h3>Start location:</h3>
+                </div>
+                <div class="col-10">
+                    <select name="destinations" id="ddDestination">
+                        <option value="Khayelitsha">Khayelitsha</option>
+                        <option value="Dunoon">Dunoon</option>
+                        <option value="Mitchells Plain">Mitchells Plain</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <img src="./img/departure.png" alt="" width="45">
+                    <h2>Travel Times:</h2>
+                    <div>
+                        <input type="radio" name="travelTime" id="peak">
+                        <label for="peak">Peak</label>
+                        <input type="radio" name="travelTime" id="offPeak">
+                        <label for="offPeak">Off Peak</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="returnTrip" id="returnTrip">
+                        <label for="returnTrip">Return Trip</label>
+                        <button class="btnCalculate">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <img src="./img/math.png" alt="" width="45">
+                <h1>Calculations</h1>
+                <div class="col-2">
+                    <h3>Number of single trips:</h3>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="tripNumberSingle" id="tripNumberSingle">
+                </div>
+                <div class="col-2">
+                    <h3>Price per trip (single):</h3>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="tripCostSingle" id="tripCostSingle">
+                </div>
+                <div class="col-2">
+                    <h3>Number of return trips:</h3>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="tripNumberReturn" id="tripNumberReturn">
+                </div>
+                <div class="col-2">
+                    <h3>Price per trip (return):</h3>
+                </div>
+                <div class="col-10">
+                    <input type="text" name="tripCostReturn" id="tripCostReturn">
+                </div>
+            </div>
+                
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h4>Icons used</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.flaticon.com/free-icons/electric-bus" title="electric bus icons">Electric bus icons created by Bharat Icons - Flaticon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Bharat Icons - Flaticon</a>
+                    </li>
+                    <li>
+                        <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator icons created by apien - Flaticon</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bus-travel-widget.js"></script>
+    <script src="./js/bus-travel-widget-DOM.js"></script>
+</body>
+</html>
